@@ -14,10 +14,10 @@ const AlgoContext = ({ children }) => {
     const [settings, setSettings] = useState(defaultSettings)
 
   return (
-    <SettingContext.Provider value={{ settings, setSettings }} >
+    <SettingsContext.Provider value={{ settings, setSettings }} >
         {children}
-    </SettingContext.Provider>
+    </SettingsContext.Provider>
   )
 }
 
-export default AlgoContext
+export {AlgoContext, SettingsContext}

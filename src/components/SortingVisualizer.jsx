@@ -1,7 +1,8 @@
 
+
 const SortingVisualizer = () => {
   return (
-    <main><Nav /></main>
+    <main></main>
   )
 }
 
