@@ -11,6 +11,26 @@ const Nav = () => {
             
             <button className="underline">Sort!</button>
         </div> 
+        <div className="flex flex-col items-center w-full pb-3">
+            <label htmlFor="items_amount">Array Length: 25</label>
+            <input 
+                type="range" 
+                name="items_amount" 
+                id="items_amount"
+                className="w-full max-w-2xl" 
+                default={25}
+                min={1}
+            />
+            <label htmlFor="delay">Delay: 15</label>
+            <input 
+                type="range"
+                name="delay"
+                id="delay"
+                className="w-full max-w-2xl"
+                min={3}
+                default={15} 
+            />
+        </div>
     </nav>
   )
 }
