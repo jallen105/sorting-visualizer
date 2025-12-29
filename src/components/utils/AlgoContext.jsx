@@ -1,4 +1,4 @@
-import { useState, createContext } from "react"
+import { useState, createContext, useEffect } from "react"
 
 
 const defaultSettings = {
@@ -9,15 +9,28 @@ const defaultSettings = {
 
 const SettingsContext = createContext(defaultSettings)
 
+const ItemsContext = createContext([])
+
 const AlgoContext = ({ children }) => {
 
     const [settings, setSettings] = useState(defaultSettings)
+    const [items, setItems] = useState([])
+
+    useEffect(() => {
+      const ranNums = []
+      for (let i = 0; i < settings.arrayLen; i++) {
+        ranNums.push(Math.floor(Math.random() * 540))
+      }
+      setItems(ranNums)
+    }, [settings.arrayLen])
 
   return (
-    <SettingsContext.Provider value={{ settings, setSettings }} >
+    <ItemsContext.Provider value={{items, setItems}}>
+      <SettingsContext.Provider value={{ settings, setSettings }} >
         {children}
-    </SettingsContext.Provider>
+      </SettingsContext.Provider>
+    </ItemsContext.Provider>
   )
 }
 
-export {AlgoContext, SettingsContext}
+export {AlgoContext, SettingsContext, ItemsContext}

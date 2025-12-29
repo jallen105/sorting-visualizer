@@ -38,7 +38,7 @@ const Nav = () => {
                 name="items_amount" 
                 id="items_amount"
                 className="w-full max-w-2xl" 
-                default={25}
+                defaultValue={25}
                 min={1}
                 onChange={handleChange}
             />
@@ -49,7 +49,7 @@ const Nav = () => {
                 id="delay"
                 className="w-full max-w-2xl"
                 min={3}
-                default={15}
+                defaultValue={15}
                 onChange={handleChange} 
             />
         </div>

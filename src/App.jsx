@@ -3,7 +3,7 @@ import Nav from "./components/Nav"
 
 function App() {
   return (
-    <main>
+    <main className="grid grid-rows-6 bg-gray-100 w-screen h-screen">
       <Nav />
       <SortingVisualizer />
     </main>
